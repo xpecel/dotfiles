@@ -349,4 +349,3 @@ exec --no-startup-id pulseaudio
 exec --no-startup-id vpnd
 exec --no-startup-id feh ~/Pictures/void.png --bg-fill 
 bindsym $mod+z exec --no-startup-id  rofi -show drun -show-icons
-#exec --no-startup-id betterlockscreen -w blur 
