@@ -340,6 +340,9 @@ mode "$mode_gaps_outer" {
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "light -A 10; exec notify-send -h int:value:$(light -G) 'Brightness Up!'"
 bindsym XF86MonBrightnessDown exec "light -U 10; exec notify-send -h int:value:$(light -G) 'Brightness Down!'"
+# Volume controls
+bindsym XF86AudioRaiseVolume exec pamixer -i 5 && exec dunstify -t 1000 -a "volume" -r 25 -h int:value:$(pamixer --get-volume-human) " Volume Up!"
+bindsym XF86AudioLowerVolume exec pamixer -d 5 && exec dunstify -t 1000 -a "volume" -r 25 -h int:value:$(pamixer --get-volume-human) " Volume Down!"
 #Lockscreen
 bindsym $mod+0 exec betterlockscreen -l blur
 # Autostart applications
